@@ -15,6 +15,7 @@ rm -Rf package/lean/default-settings/files/zzz-default-settings
 rm -Rf package/lean/luci-app-ssr-plus
 rm -Rf package/my/luci-app-eqos
 rm -Rf package/my/OpenAppFilter
+rm -Rf package/my/luci-app-control-webrestriction
 cp -Rf ../diy-lean/* ./
 sed -i 's/OpenWrt/LedeWrt Lite/g' package/lean/default-settings/files/zzz-default-settings
 rm -Rf package/my/luci-app-koolproxyR
@@ -43,5 +44,6 @@ git clone https://github.com/jefferymvp/luci-app-koolproxyR.git  package/luci-ap
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns  package/luci-app-smartdns
+git clone https://github.com/ledewrt/luci-app-control-webrestriction.git package/luci-app-control-webrestriction
 ./scripts/feeds update -a
 ./scripts/feeds install -a
