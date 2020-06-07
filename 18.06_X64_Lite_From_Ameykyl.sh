@@ -13,6 +13,8 @@
 #添加固件版本描述
 rm -Rf package/lean/default-settings/files/zzz-default-settings
 rm -Rf package/lean/luci-app-ssr-plus
+rm -Rf package/my/luci-app-eqos
+rm -Rf package/my/OpenAppFilter
 cp -Rf ../diy-lean/* ./
 sed -i 's/OpenWrt/LedeWrt Lite/g' package/lean/default-settings/files/zzz-default-settings
 rm -Rf package/my/luci-app-koolproxyR
@@ -38,7 +40,7 @@ sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +%Y%m%d)-LEDE-1806-Lite-/g' incl
 git clone https://github.com/ledewrt/luci-app-eqos.git  package/luci-app-eqos
 git clone https://github.com/jefferymvp/luci-app-koolproxyR.git  package/luci-app-koolproxyR
 #git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
-#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns  package/luci-app-smartdns
 ./scripts/feeds update -a
