@@ -17,7 +17,7 @@ rm -Rf package/my/luci-app-eqos
 rm -Rf package/my/OpenAppFilter
 rm -Rf package/my/luci-app-control-webrestriction
 cp -Rf ../diy-lean/* ./
-sed -i 's/OpenWrt/LedeWrt Lite/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/OpenWrt/LedeWrt Std/g' package/lean/default-settings/files/zzz-default-settings
 rm -Rf package/my/luci-app-koolproxyR
 # 修改默认IP为192.168.168.1
 #sed -i 's/192.168.1.1/192.168.168.1/g' package/base-files/files/bin/config_generate
@@ -30,7 +30,7 @@ rm -Rf package/my/luci-app-koolproxyR
 #删除默认密码
 #sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./d' package/lean/default-settings/files/zzz-default-settings
 #添加img编译时间前缀。
-sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +%Y%m%d)-LEDE-1806-Lite-/g' include/image.mk
+sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +%Y%m%d)-LEDE-1806-Std-/g' include/image.mk
 #选择编译内核。
 #sed -i 's/5.4/4.14/g' target/linux/x86/Makefile
 #修改网络连接数
