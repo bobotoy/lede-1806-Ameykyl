@@ -120,8 +120,8 @@ jobs:
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
     - name: Get current date
-      id: date
-       echo "::set-env name=date::$(date +'%Y%m%d_%H/%M')"
+      run: |   
+        echo "::set-env name=date::$(date +'%Y%m%d_%H/%M')"
       
     - name: Organize files and zip
       id: organize
