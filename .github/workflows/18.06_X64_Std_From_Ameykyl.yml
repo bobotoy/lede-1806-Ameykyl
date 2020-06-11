@@ -120,7 +120,7 @@ jobs:
         echo "::set-output name=status::success"
     - name: Get current date
       run: |   
-        echo "::set-env name=date::$(date +'%Y%m%d_%H/%M')"
+        echo "::set-env name=date::$(date +'%Y%m%d%H%M')"
       
     - name: Organize files and zip
       id: organize
