@@ -33,7 +33,7 @@ rm -Rf package/my/luci-app-koolproxyR
 sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +%Y%m%d)-LEDE-1806-Std-/g' include/image.mk
 #克隆leo的
 rm -Rf package/my/luci-theme-opentomcat
-git clone https://github.com/Leo-Jo-My/luci-theme-opentomato package/luci-theme-opentomato
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat package/luci-theme-opentomcat
 sed -i 's/OpenWrt/LEDE/g' package/luci-theme-opentomcat/files/templates/header.htm
 #选择编译内核。
 #sed -i 's/5.4/4.14/g' target/linux/x86/Makefile
