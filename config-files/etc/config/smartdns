@@ -12,7 +12,7 @@ config smartdns
 	option seconddns_no_rule_soa '0'
 	option seconddns_no_cache '0'
 	option coredump '0'
-	option serve_expired '1'
+	option serve_expired '0'
 	option server_name 'china'
 	option seconddns_enabled '1'
 	option seconddns_server_group 'world'
